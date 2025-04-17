@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Love Confession</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lora:ital@0;1&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #0a0908;
+            color: #e0d8cb;
+            font-family: 'Lora', serif;
+            line-height: 1.6;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23352e28' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .parchment {
+            background-color: rgba(31, 24, 18, 0.85);
+            border: 1px solid #4a3f35;
+            padding: 3rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+            position: relative;
+            overflow: hidden;
+            border-radius: 2px;
+        }
+        
+        .parchment::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23d4c8b8' fill-opacity='0.02' fill-rule='evenodd'/%3E%3C/svg%3E");
+            opacity: 0.2;
+            z-index: 0;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+            z-index: 1;
+        }
+        
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            font-weight: normal;
+            margin-bottom: 1rem;
+            color: #d4bc94;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            letter-spacing: 1px;
+        }
+        
+        .poem {
+            position: relative;
+            z-index: 1;
+            font-size: 1.1rem;
+            color: #d4c8b8;
+            text-align: center;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+        
+        .signature {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            text-align: right;
+            margin-top: 2rem;
+            color: #a69580;
+        }
+        
+        .divider {
+            display: flex;
+            align-items: center;
+            margin: 2rem 0;
+            color: #a69580;
+        }
+        
+        .divider::before, .divider::after {
+            content: "";
+            flex: 1;
+            border-bottom: 1px solid #4a3f35;
+        }
+        
+        .divider-icon {
+            margin: 0 1rem;
+            font-size: 1rem;
+        }
+        
+        .candlelight {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: radial-gradient(ellipse at center, rgba(255, 238, 168, 0.05) 0%, rgba(255, 238, 168, 0) 70%);
+            z-index: 0;
+            animation: flicker 5s infinite alternate;
+        }
+        
+        @keyframes flicker {
+            0%, 18%, 22%, 25%, 53%, 57%, 100% {
+                opacity: 0.7;
+            }
+            20%, 24%, 55% {
+                opacity: 0.5;
+            }
+        }
+        
+        .quote {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            text-align: center;
+            font-size: 1rem;
+            color: #a69580;
+            margin-bottom: 2rem;
+            max-width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .decor {
+            position: absolute;
+            opacity: 0.07;
+            z-index: 0;
+        }
+        
+        .decor.rose {
+            bottom: 20px;
+            right: 30px;
+            font-size: 5rem;
+            transform: rotate(25deg);
+        }
+        
+        .decor.pen {
+            top: 40px;
+            left: 30px;
+            font-size: 3rem;
+            transform: rotate(-15deg);
+        }
+        
+        .decor.book {
+            bottom: 40px;
+            left: 40px;
+            font-size: 4rem;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 2rem;
+            font-size: 0.9rem;
+            color: #a69580;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .audio-control {
+            text-align: center;
+            margin-top: 2rem;
+            font-size: 0.9rem;
+        }
+        
+        .audio-control button {
+            background: none;
+            border: 1px solid #4a3f35;
+            color: #a69580;
+            padding: 0.5rem 1rem;
+            font-family: 'Lora', serif;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .audio-control button:hover {
+            background-color: rgba(166, 149, 128, 0.1);
+        }
+        
+        .wax-seal {
+            position: absolute;
+            bottom: 30px;
+            right: 50px;
+            width: 60px;
+            height: 60px;
+            background-color: #943a20;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+            color: #e0d8cb;
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.5rem;
+            z-index: 2;
+            transform: rotate(15deg);
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            .parchment {
+                padding: 2rem;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .poem {
+                font-size: 1rem;
+            }
+            
+            .wax-seal {
+                width: 50px;
+                height: 50px;
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="parchment">
+            <div class="candlelight"></div>
+            
+            <i class="fas fa-feather-alt decor pen"></i>
+            <i class="fas fa-book-open decor book"></i>
+            <i class="fas fa-rose decor rose"></i>
+            
+            <div class="header">
+                <h1>Eternal Aspen</h1>
+                <div class="quote">"Love is the shadow that ripens the wine of our existence."</div>
+            </div>
+            
+            <div class="divider">
+                <span class="divider-icon"><i class="fas fa-heart"></i></span>
+            </div>
+            
+            <div class="poem">
+                <p>From ancient texts, we learn of a man<br>
+                Who laid down his life for love—<br>
+                A love that embraced all of mankind.<br>
+                Sacrifice, the purest testament,<br>
+                Where brave souls surrender their breath<br>  
+                For ideals too vast to grasp.</p>
+                
+                <p>But how far can my love stretch<br>
+                In this fragile reality we inhabit?<br>
+                To claim that my desire is eternal<br>
+                Would be a falsehood,<br>
+                For in this perilous world,<br>
+                I would offer my heart,<br>
+                A shield against the chaos<br>
+                To protect you, my dear.</p>
+                
+                <p>I may weave chaos into my existence,<br>
+                Yet I yearn to guard you,<br>
+                To stand as your sentinel,<br>
+                Though miles may lie between us.<br>
+                Am I your hero?<br>
+                Not in the grand tales of valor,<br>
+                But a humble protector,<br>
+                Suspended in the space of longing,<br>
+                My thoughts tethered to you,<br>
+                My sweet Aspen.</p>
+                
+                <p>In this vast expanse,<br>
+                I catch glimpses of your beauty,<br>
+                A vision that ignites my spirit.<br>
+                Words falter when I feel undone,<br>
+                Yet in the silence,<br>
+                One name echoes through the void—<br>
+                My last breath, my final whisper:<br>
+                Aspen.</p>
+            </div>
+            
+            <div class="signature">
+                Forever yours,<br>
+                Anthony
+            </div>
+            
+            <div class="wax-seal">A</div>
+        </div>
+        
+        <div class="audio-control">
+            <audio id="background-music" loop>
+                <source src="" type="audio/mpeg">
+            </audio>
+            <button onclick="toggleMusic()"><i class="fas fa-music"></i> Play Background Music</button>
+        </div>
+        
+        <div class="footer">
+            <p>&copy; 2025 | A testament of devotion</p>
+        </div>
+    </div>
+
+    <script>
+        // Candle flicker effect enhancement
+        const candlelight = document.querySelector('.candlelight');
+        
+        function enhanceFlicker() {
+            const intensity = 0.5 + Math.random() * 0.5;
+            candlelight.style.opacity = intensity;
+            
+            const flickerTime = 100 + Math.random() * 900;
+            setTimeout(enhanceFlicker, flickerTime);
+        }
+        
+        enhanceFlicker();
+        
+        // Music toggle functionality
+        let isPlaying = false;
+        const music = document.getElementById('background-music');
+        
+        function toggleMusic() {
+            const button = document.querySelector('.audio-control button');
+            
+            if (isPlaying) {
+                music.pause();
+                button.innerHTML = '<i class="fas fa-music"></i> Play Background Music';
+            } else {
+                music.play();
+                button.innerHTML = '<i class="fas fa-pause"></i> Pause Background Music';
+            }
+            
+            isPlaying = !isPlaying;
+        }
+    </script>
+</body>
+</html>
